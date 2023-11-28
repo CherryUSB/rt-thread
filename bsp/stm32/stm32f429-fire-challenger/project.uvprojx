@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>__STDC_LIMIT_MACROS, RT_USING_ARMLIBC, USE_HAL_DRIVER, RT_USING_LIBC, __CLK_TCK=RT_TICK_PER_SECOND, __RTTHREAD__, STM32F429xx</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\components\drivers\include;..\..\..\components\libc\posix\io\epoll;..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Inc;..\libraries\STM32F4xx_HAL\CMSIS\Device\ST\STM32F4xx\Include;board\CubeMX_Config\Inc;..\..\..\components\net\lwip\lwip-2.1.2\src\include;applications;..\..\..\libcpu\arm\common;..\..\..\components\drivers\include;packages\CherryUSB-latest\class\dfu;..\..\..\components\libc\compilers\common\extension\fcntl\octal;..\..\..\include;packages\CherryUSB-latest\core;board;..\..\..\components\libc\compilers\common\include;packages\CherryUSB-latest\class\cdc;..\..\..\components\finsh;..\..\..\components\net\lwip\port;packages\CherryUSB-latest\class\hub;..\..\..\components\drivers\include;..\..\..\components\libc\posix\io\eventfd;..\..\..\components\libc\posix\io\poll;..\..\..\components\net\lwip\lwip-2.1.2\src\include\compat\posix;..\libraries\HAL_Drivers\config;packages\CherryUSB-latest\common;..\..\..\components\libc\compilers\common\extension;packages\CherryUSB-latest\class\wireless;..\libraries\HAL_Drivers\CMSIS\Include;..\..\..\components\net\lwip\lwip-2.1.2\src\include\netif;board\ports;..\..\..\components\libc\posix\ipc;packages\CherryUSB-latest\class\msc;packages\CherryUSB-latest\class\audio;packages\CherryUSB-latest\class\hid;..\..\..\libcpu\arm\cortex-m4;..\..\..\components\drivers\include;packages\CherryUSB-latest\osal;packages\CherryUSB-latest\class\video;..\libraries\HAL_Drivers;.;..\..\..\components\net\netdev\include</IncludePath>
+              <IncludePath>board;..\..\..\components\libc\posix\io\poll;.;packages\CherryUSB-latest\common;..\..\..\include;..\..\..\components\net\lwip\lwip-2.1.2\src\include\compat\posix;..\libraries\HAL_Drivers;packages\CherryUSB-latest\class\wireless;packages\CherryUSB-latest\osal;..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Inc;..\..\..\components\dfs\dfs_v1\include;packages\CherryUSB-latest\class\cdc;..\..\..\components\drivers\include;..\..\..\components\libc\compilers\common\extension\fcntl\octal;..\..\..\components\libc\compilers\common\extension;packages\CherryUSB-latest\class\dfu;board\CubeMX_Config\Inc;..\libraries\STM32F4xx_HAL\CMSIS\Device\ST\STM32F4xx\Include;..\..\..\components\libc\posix\ipc;..\libraries\HAL_Drivers\config;..\..\..\components\drivers\include;packages\CherryUSB-latest\class\hid;..\..\..\components\dfs\dfs_v1\filesystems\devfs;packages\CherryUSB-latest\class\video;..\..\..\libcpu\arm\cortex-m4;..\libraries\HAL_Drivers\CMSIS\Include;packages\CherryUSB-latest\class\audio;..\..\..\components\libc\compilers\common\include;packages\CherryUSB-latest\class\msc;board\ports;applications;..\..\..\components\drivers\include;..\..\..\components\drivers\include;..\..\..\components\net\lwip\lwip-2.1.2\src\include;..\..\..\components\net\lwip\port;packages\CherryUSB-latest\core;..\..\..\components\dfs\dfs_v1\filesystems\elmfat;packages\CherryUSB-latest\class\hub;..\..\..\components\net\lwip\lwip-2.1.2\src\include\netif;..\..\..\components\net\netdev\include;..\..\..\components\finsh;..\..\..\libcpu\arm\common;..\..\..\components\libc\posix\io\eventfd;..\..\..\components\libc\posix\io\epoll</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -395,24 +395,14 @@
           <GroupName>CherryUSB</GroupName>
           <Files>
             <File>
-              <FileName>usbh_cdc_acm.c</FileName>
+              <FileName>usb_osal_rtthread.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages\CherryUSB-latest\class\cdc\usbh_cdc_acm.c</FilePath>
+              <FilePath>packages\CherryUSB-latest\osal\usb_osal_rtthread.c</FilePath>
             </File>
             <File>
-              <FileName>usbh_hid.c</FileName>
+              <FileName>usb_host.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages\CherryUSB-latest\class\hid\usbh_hid.c</FilePath>
-            </File>
-            <File>
-              <FileName>msh_cmd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\CherryUSB-latest\third_party\rt-thread-4.1.1\msh_cmd.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbh_msc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\CherryUSB-latest\class\msc\usbh_msc.c</FilePath>
+              <FilePath>packages\CherryUSB-latest\demo\usb_host.c</FilePath>
             </File>
             <File>
               <FileName>usbh_core.c</FileName>
@@ -420,19 +410,24 @@
               <FilePath>packages\CherryUSB-latest\core\usbh_core.c</FilePath>
             </File>
             <File>
-              <FileName>usb_hc_dwc2.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\CherryUSB-latest\port\dwc2\usb_hc_dwc2.c</FilePath>
-            </File>
-            <File>
               <FileName>usbh_rndis.c</FileName>
               <FileType>1</FileType>
               <FilePath>packages\CherryUSB-latest\class\wireless\usbh_rndis.c</FilePath>
             </File>
             <File>
-              <FileName>usb_osal_rtthread.c</FileName>
+              <FileName>usb_hc_dwc2.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages\CherryUSB-latest\osal\usb_osal_rtthread.c</FilePath>
+              <FilePath>packages\CherryUSB-latest\port\dwc2\usb_hc_dwc2.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbh_msc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\CherryUSB-latest\class\msc\usbh_msc.c</FilePath>
+            </File>
+            <File>
+              <FileName>usb_glue_st.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\CherryUSB-latest\port\dwc2\usb_glue_st.c</FilePath>
             </File>
             <File>
               <FileName>usbh_hub.c</FileName>
@@ -440,9 +435,24 @@
               <FilePath>packages\CherryUSB-latest\class\hub\usbh_hub.c</FilePath>
             </File>
             <File>
-              <FileName>usb_host.c</FileName>
+              <FileName>usbh_cdc_acm.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages\CherryUSB-latest\demo\usb_host.c</FilePath>
+              <FilePath>packages\CherryUSB-latest\class\cdc\usbh_cdc_acm.c</FilePath>
+            </File>
+            <File>
+              <FileName>msh_cmd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\CherryUSB-latest\third_party\rt-thread-5.0\msh_cmd.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbh_hid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\CherryUSB-latest\class\hid\usbh_hid.c</FilePath>
+            </File>
+            <File>
+              <FileName>dfs_usbh_msc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\CherryUSB-latest\third_party\rt-thread-5.0\dfs_usbh_msc.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -612,6 +622,51 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>Filesystem</GroupName>
+          <Files>
+            <File>
+              <FileName>devfs.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\components\dfs\dfs_v1\filesystems\devfs\devfs.c</FilePath>
+            </File>
+            <File>
+              <FileName>dfs_elm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\components\dfs\dfs_v1\filesystems\elmfat\dfs_elm.c</FilePath>
+            </File>
+            <File>
+              <FileName>ff.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\components\dfs\dfs_v1\filesystems\elmfat\ff.c</FilePath>
+            </File>
+            <File>
+              <FileName>ffunicode.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\components\dfs\dfs_v1\filesystems\elmfat\ffunicode.c</FilePath>
+            </File>
+            <File>
+              <FileName>dfs.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\components\dfs\dfs_v1\src\dfs.c</FilePath>
+            </File>
+            <File>
+              <FileName>dfs_file.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\components\dfs\dfs_v1\src\dfs_file.c</FilePath>
+            </File>
+            <File>
+              <FileName>dfs_fs.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\components\dfs\dfs_v1\src\dfs_fs.c</FilePath>
+            </File>
+            <File>
+              <FileName>dfs_posix.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\components\dfs\dfs_v1\src\dfs_posix.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>Finsh</GroupName>
           <Files>
             <File>
@@ -633,6 +688,11 @@
               <FileName>cmd.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\components\finsh\cmd.c</FilePath>
+            </File>
+            <File>
+              <FileName>msh_file.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\components\finsh\msh_file.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -670,9 +730,9 @@
               <FilePath>..\..\..\src\kservice.c</FilePath>
             </File>
             <File>
-              <FileName>memheap.c</FileName>
+              <FileName>mem.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\memheap.c</FilePath>
+              <FilePath>..\..\..\src\mem.c</FilePath>
             </File>
             <File>
               <FileName>mempool.c</FileName>
@@ -698,11 +758,6 @@
               <FileName>timer.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\src\timer.c</FilePath>
-            </File>
-            <File>
-              <FileName>mem.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\src\mem.c</FilePath>
             </File>
           </Files>
         </Group>

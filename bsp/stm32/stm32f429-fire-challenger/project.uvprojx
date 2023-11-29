@@ -400,24 +400,9 @@
               <FilePath>packages\CherryUSB-latest\osal\usb_osal_rtthread.c</FilePath>
             </File>
             <File>
-              <FileName>usb_host.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\CherryUSB-latest\demo\usb_host.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbh_core.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\CherryUSB-latest\core\usbh_core.c</FilePath>
-            </File>
-            <File>
               <FileName>usbh_rndis.c</FileName>
               <FileType>1</FileType>
               <FilePath>packages\CherryUSB-latest\class\wireless\usbh_rndis.c</FilePath>
-            </File>
-            <File>
-              <FileName>usb_hc_dwc2.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\CherryUSB-latest\port\dwc2\usb_hc_dwc2.c</FilePath>
             </File>
             <File>
               <FileName>usbh_msc.c</FileName>
@@ -425,9 +410,44 @@
               <FilePath>packages\CherryUSB-latest\class\msc\usbh_msc.c</FilePath>
             </File>
             <File>
+              <FileName>msh_cmd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\CherryUSB-latest\third_party\rt-thread-5.0\msh_cmd.c</FilePath>
+            </File>
+            <File>
+              <FileName>usb_hc_dwc2.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\CherryUSB-latest\port\dwc2\usb_hc_dwc2.c</FilePath>
+            </File>
+            <File>
+              <FileName>usb_host.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\CherryUSB-latest\demo\usb_host.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbh_cdc_ecm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\CherryUSB-latest\class\cdc\usbh_cdc_ecm.c</FilePath>
+            </File>
+            <File>
               <FileName>usb_glue_st.c</FileName>
               <FileType>1</FileType>
               <FilePath>packages\CherryUSB-latest\port\dwc2\usb_glue_st.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbh_hid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\CherryUSB-latest\class\hid\usbh_hid.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbh_core.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\CherryUSB-latest\core\usbh_core.c</FilePath>
+            </File>
+            <File>
+              <FileName>dfs_usbh_msc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\CherryUSB-latest\third_party\rt-thread-5.0\dfs_usbh_msc.c</FilePath>
             </File>
             <File>
               <FileName>usbh_hub.c</FileName>
@@ -438,21 +458,6 @@
               <FileName>usbh_cdc_acm.c</FileName>
               <FileType>1</FileType>
               <FilePath>packages\CherryUSB-latest\class\cdc\usbh_cdc_acm.c</FilePath>
-            </File>
-            <File>
-              <FileName>msh_cmd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\CherryUSB-latest\third_party\rt-thread-5.0\msh_cmd.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbh_hid.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\CherryUSB-latest\class\hid\usbh_hid.c</FilePath>
-            </File>
-            <File>
-              <FileName>dfs_usbh_msc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\CherryUSB-latest\third_party\rt-thread-5.0\dfs_usbh_msc.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -6,9 +6,10 @@
 #ifndef CHERRYUSB_CONFIG_H
 #define CHERRYUSB_CONFIG_H
 
-#define CHERRYUSB_VERSION 0x001000
+#define CHERRYUSB_VERSION 0x001002
 
 /* ================ USB common Configuration ================ */
+
 extern int rt_kprintf(const char *fmt, ...);
 
 #define CONFIG_USB_PRINTF(...) rt_kprintf(__VA_ARGS__)
@@ -45,27 +46,6 @@ extern int rt_kprintf(const char *fmt, ...);
 /* Enable test mode */
 // #define CONFIG_USBDEV_TEST_MODE
 
-//#define CONFIG_USBDEV_TX_THREAD
-//#define CONFIG_USBDEV_RX_THREAD
-
-#ifdef CONFIG_USBDEV_TX_THREAD
-#ifndef CONFIG_USBDEV_TX_PRIO
-#define CONFIG_USBDEV_TX_PRIO 4
-#endif
-#ifndef CONFIG_USBDEV_TX_STACKSIZE
-#define CONFIG_USBDEV_TX_STACKSIZE 2048
-#endif
-#endif
-
-#ifdef CONFIG_USBDEV_RX_THREAD
-#ifndef CONFIG_USBDEV_RX_PRIO
-#define CONFIG_USBDEV_RX_PRIO 4
-#endif
-#ifndef CONFIG_USBDEV_RX_STACKSIZE
-#define CONFIG_USBDEV_RX_STACKSIZE 2048
-#endif
-#endif
-
 #ifndef CONFIG_USBDEV_MSC_BLOCK_SIZE
 #define CONFIG_USBDEV_MSC_BLOCK_SIZE 512
 #endif
@@ -80,6 +60,16 @@ extern int rt_kprintf(const char *fmt, ...);
 
 #ifndef CONFIG_USBDEV_MSC_VERSION_STRING
 #define CONFIG_USBDEV_MSC_VERSION_STRING "0.01"
+#endif
+
+// #define CONFIG_USBDEV_MSC_THREAD
+
+#ifndef CONFIG_USBDEV_MSC_PRIO
+#define CONFIG_USBDEV_MSC_PRIO 4
+#endif
+
+#ifndef CONFIG_USBDEV_MSC_STACKSIZE
+#define CONFIG_USBDEV_MSC_STACKSIZE 2048
 #endif
 
 #ifndef CONFIG_USBDEV_RNDIS_RESP_BUFFER_SIZE
@@ -114,7 +104,6 @@ extern int rt_kprintf(const char *fmt, ...);
 #define CONFIG_USBHOST_MAX_MSC_CLASS     2
 #define CONFIG_USBHOST_MAX_AUDIO_CLASS   1
 #define CONFIG_USBHOST_MAX_VIDEO_CLASS   1
-#define CONFIG_USBHOST_MAX_RNDIS_CLASS   1
 
 #define CONFIG_USBHOST_DEV_NAMELEN 16
 
@@ -125,19 +114,34 @@ extern int rt_kprintf(const char *fmt, ...);
 #define CONFIG_USBHOST_PSC_STACKSIZE 2048
 #endif
 
-// #define CONFIG_USBHOST_GET_STRING_DESC
+//#define CONFIG_USBHOST_GET_STRING_DESC
+
 // #define CONFIG_USBHOST_MSOS_ENABLE
-// #define CONFIG_USBHOST_MSOS_VENDOR_CODE 0XEE
+#define CONFIG_USBHOST_MSOS_VENDOR_CODE 0x00
 
 /* Ep0 max transfer buffer */
 #define CONFIG_USBHOST_REQUEST_BUFFER_LEN 512
 
 #ifndef CONFIG_USBHOST_CONTROL_TRANSFER_TIMEOUT
-#define CONFIG_USBHOST_CONTROL_TRANSFER_TIMEOUT 1000
+#define CONFIG_USBHOST_CONTROL_TRANSFER_TIMEOUT 500
 #endif
 
 #ifndef CONFIG_USBHOST_MSC_TIMEOUT
 #define CONFIG_USBHOST_MSC_TIMEOUT 5000
+#endif
+
+#ifndef CONFIG_USBHOST_RNDIS_PRIO
+#define CONFIG_USBHOST_RNDIS_PRIO 1
+#endif
+#ifndef CONFIG_USBHOST_RNDIS_STACKSIZE
+#define CONFIG_USBHOST_RNDIS_STACKSIZE 2048
+#endif
+
+#ifndef CONFIG_USBHOST_CDC_ECM_PRIO
+#define CONFIG_USBHOST_CDC_ECM_PRIO 1
+#endif
+#ifndef CONFIG_USBHOST_CDC_ECM_STACKSIZE
+#define CONFIG_USBHOST_CDC_ECM_STACKSIZE 2048
 #endif
 
 /* ================ USB Device Port Configuration ================*/

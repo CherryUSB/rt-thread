@@ -48,6 +48,12 @@ SECTIONS
         KEEP(*(SORT(.rti_fn*)))
         __rt_init_end = .;
 
+       /* section information for usbh class */
+       . = ALIGN(4);
+       __usbh_class_info_start__ = .;
+       KEEP(*(.usbh_class_info))
+       __usbh_class_info_end__ = .;
+
         . = ALIGN(4);
 
         PROVIDE(__ctors_start__ = .);

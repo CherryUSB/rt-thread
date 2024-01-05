@@ -6,7 +6,8 @@
 #ifndef CHERRYUSB_CONFIG_H
 #define CHERRYUSB_CONFIG_H
 
-#define CHERRYUSB_VERSION 0x001002
+#define CHERRYUSB_VERSION     0x010000
+#define CHERRYUSB_VERSION_STR "v1.0.0"
 
 /* ================ USB common Configuration ================ */
 
@@ -46,8 +47,8 @@ extern int rt_kprintf(const char *fmt, ...);
 /* Enable test mode */
 // #define CONFIG_USBDEV_TEST_MODE
 
-#ifndef CONFIG_USBDEV_MSC_BLOCK_SIZE
-#define CONFIG_USBDEV_MSC_BLOCK_SIZE 512
+#ifndef CONFIG_USBDEV_MSC_MAX_BUFSIZE
+#define CONFIG_USBDEV_MSC_MAX_BUFSIZE 512
 #endif
 
 #ifndef CONFIG_USBDEV_MSC_MANUFACTURER_STRING

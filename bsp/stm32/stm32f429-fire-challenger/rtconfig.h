@@ -105,6 +105,9 @@
 
 #define RT_USING_DEVICE_IPC
 #define RT_UNAMED_PIPE_NUMBER 64
+#define RT_USING_SYSTEM_WORKQUEUE
+#define RT_SYSTEM_WORKQUEUE_STACKSIZE 2048
+#define RT_SYSTEM_WORKQUEUE_PRIORITY 23
 #define RT_USING_SERIAL
 #define RT_USING_SERIAL_V1
 #define RT_SERIAL_USING_DMA
@@ -128,6 +131,10 @@
 
 /* POSIX (Portable Operating System Interface) layer */
 
+#define RT_USING_POSIX_FS
+#define RT_USING_POSIX_POLL
+#define RT_USING_POSIX_SELECT
+#define RT_USING_POSIX_SOCKET
 
 /* Interprocess Communication (IPC) */
 
@@ -137,6 +144,13 @@
 
 /* Network */
 
+#define RT_USING_SAL
+#define SAL_INTERNET_CHECK
+
+/* Docking with protocol stacks */
+
+#define SAL_USING_LWIP
+#define SAL_USING_POSIX
 #define RT_USING_NETDEV
 #define NETDEV_USING_IFCONFIG
 #define NETDEV_USING_PING
@@ -222,9 +236,45 @@
 
 /* CYW43439 WiFi */
 
+#define PKG_USING_NETUTILS
+#define PKG_NETUTILS_IPERF
+#define PKG_USING_NETUTILS_LATEST_VERSION
+#define PKG_NETUTILS_VER_NUM 0x99999
 
 /* IoT Cloud */
 
+#define PKG_USING_NIMBLE
+
+/* Bluetooth Role support */
+
+#define PKG_NIMBLE_ROLE_CENTRAL
+#define PKG_NIMBLE_ROLE_BROADCASTER
+#define PKG_NIMBLE_ROLE_OBSERVER
+
+/* Host Stack Configuration */
+
+#define PKG_NIMBLE_HOST
+#define PKG_NIMBLE_HOST_THREAD_STACK_SIZE 1536
+#define PKG_NIMBLE_HOST_THREAD_PRIORITY 8
+
+/* Controller Configuration */
+
+
+/* Bluetooth Mesh support */
+
+
+/* HCI Transport support */
+
+
+/* Device Driver support */
+
+#define NIMBLE_DEBUG_LEVEL_I
+#define NIMBLE_DEBUG_LEVEL 2
+#define PKG_NIMBLE_SAMPLE_CENTRAL
+#define PKG_NIMBLE_MAX_CONNECTIONS 1
+#define PKG_NIMBLE_WHITELIST
+#define PKG_NIMBLE_MULTI_ADV_INSTANCES 0
+#define PKG_USING_NIMBLE_LATEST_VERSION
 
 /* security packages */
 

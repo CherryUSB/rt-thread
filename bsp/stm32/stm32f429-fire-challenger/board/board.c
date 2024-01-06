@@ -9,6 +9,8 @@
  */
 
 #include "board.h"
+#include "rtthread.h"
+#include "usbh_core.h"
 
 void SystemClock_Config(void)
 {
@@ -49,7 +51,7 @@ void SystemClock_Config(void)
   }
 }
 
-void usb_hc_low_level_init(void)
+void usb_hc_low_level_init(struct usbh_bus *bus)
 {
     GPIO_InitTypeDef GPIO_InitStruct = {0};
 #ifdef CONFIG_USB_DWC2_ULPI_PHY
@@ -127,3 +129,20 @@ void usb_hc_low_level_init(void)
     HAL_NVIC_EnableIRQ(OTG_HS_IRQn);
 #endif
 }
+
+struct usbh_bus *usb_otg_hs_bus;
+
+void OTG_HS_IRQHandler(void)
+{
+    extern void USBH_IRQHandler(struct usbh_bus *bus);
+    USBH_IRQHandler(usb_otg_hs_bus);
+}
+
+int usbh_init(void)
+{
+    usb_otg_hs_bus = usbh_alloc_bus(0, USB_OTG_HS_PERIPH_BASE);
+    usbh_initialize(usb_otg_hs_bus);
+    return 0;
+}
+
+INIT_APP_EXPORT(usbh_init);

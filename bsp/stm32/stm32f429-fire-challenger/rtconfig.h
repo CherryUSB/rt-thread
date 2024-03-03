@@ -243,38 +243,6 @@
 
 /* IoT Cloud */
 
-#define PKG_USING_NIMBLE
-
-/* Bluetooth Role support */
-
-#define PKG_NIMBLE_ROLE_CENTRAL
-#define PKG_NIMBLE_ROLE_BROADCASTER
-#define PKG_NIMBLE_ROLE_OBSERVER
-
-/* Host Stack Configuration */
-
-#define PKG_NIMBLE_HOST
-#define PKG_NIMBLE_HOST_THREAD_STACK_SIZE 1536
-#define PKG_NIMBLE_HOST_THREAD_PRIORITY 8
-
-/* Controller Configuration */
-
-
-/* Bluetooth Mesh support */
-
-
-/* HCI Transport support */
-
-
-/* Device Driver support */
-
-#define NIMBLE_DEBUG_LEVEL_I
-#define NIMBLE_DEBUG_LEVEL 2
-#define PKG_NIMBLE_SAMPLE_CENTRAL
-#define PKG_NIMBLE_MAX_CONNECTIONS 1
-#define PKG_NIMBLE_WHITELIST
-#define PKG_NIMBLE_MULTI_ADV_INSTANCES 0
-#define PKG_USING_NIMBLE_LATEST_VERSION
 
 /* security packages */
 
@@ -312,6 +280,12 @@
 /* Micrium: Micrium software products porting for RT-Thread */
 
 #define PKG_USING_CHERRYUSB
+#define PKG_CHERRYUSB_DEVICE
+#define PKG_CHERRYUSB_DEVICE_FS
+#define PKG_CHERRYUSB_DEVICE_DWC2
+#define PKG_CHERRYUSB_DEVICE_DWC2_STM32
+#define PKG_CHERRYUSB_DEVICE_CDC
+#define PKG_CHERRYUSB_DEVICE_CDC_TEMPLATE
 #define PKG_CHERRYUSB_HOST
 #define PKG_CHERRYUSB_HOST_DWC2
 #define PKG_CHERRYUSB_HOST_DWC2_STM32

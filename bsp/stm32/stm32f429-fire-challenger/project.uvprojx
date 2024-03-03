@@ -314,7 +314,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>3</Optim>
+            <Optim>2</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>__STDC_LIMIT_MACROS, RT_USING_ARMLIBC, USE_HAL_DRIVER, RT_USING_LIBC, __CLK_TCK=RT_TICK_PER_SECOND, __RTTHREAD__, STM32F429xx</Define>
               <Undefine></Undefine>
-              <IncludePath>board;packages\NimBLE-latest\porting\nimble\include;.;packages\CherryUSB-latest\common;..\..\..\include;..\..\..\components\libc\posix\io\poll;packages\NimBLE-latest\apps\blecent\src;..\..\..\components\net\sal\impl;packages\NimBLE-latest\nimble\host\util\include;..\libraries\HAL_Drivers;packages\CherryUSB-latest\class\wireless;packages\NimBLE-latest\nimble\host\src;packages\CherryUSB-latest\osal;..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Inc;packages\NimBLE-latest\nimble\host\services\tps\include;..\..\..\components\dfs\dfs_v1\include;packages\NimBLE-latest\nimble\transport\common\hci_h4\include;packages\NimBLE-latest\nimble\host\services\ans\include;packages\CherryUSB-latest\class\cdc;..\..\..\components\drivers\include;..\..\..\components\libc\compilers\common\extension\fcntl\octal;..\..\..\components\libc\compilers\common\extension;packages\CherryUSB-latest\class\dfu;board\CubeMX_Config\Inc;packages\NimBLE-latest\nimble\host\services\gap\include;..\libraries\STM32F4xx_HAL\CMSIS\Device\ST\STM32F4xx\Include;packages\NimBLE-latest\porting\npl\rtthread\include;..\libraries\HAL_Drivers\config;packages\NimBLE-latest\ext\tinycrypt\include;..\..\..\components\drivers\include;packages\NimBLE-latest\nimble\host\services\ias\include;packages\CherryUSB-latest\class\hid;..\..\..\components\libc\posix\io\eventfd;..\..\..\components\dfs\dfs_v1\filesystems\devfs;packages\CherryUSB-latest\class\video;..\..\..\libcpu\arm\cortex-m4;..\libraries\HAL_Drivers\CMSIS\Include;packages\CherryUSB-latest\class\audio;packages\NimBLE-latest\nimble\host\services\gatt\include;..\..\..\components\libc\posix\ipc;..\..\..\components\libc\compilers\common\include;packages\NimBLE-latest\nimble\include;packages\CherryUSB-latest\class\msc;packages\NimBLE-latest\nimble\host\services\bas\include;board\ports;..\..\..\components\net\sal\include;applications;..\..\..\components\drivers\include;..\..\..\components\drivers\include;..\..\..\components\net\lwip\lwip-2.1.2\src\include;..\..\..\components\net\lwip\port;packages\CherryUSB-latest\core;..\..\..\components\dfs\dfs_v1\filesystems\elmfat;..\..\..\components\net\netdev\include;..\..\..\components\net\sal\include\socket;..\..\..\components\net\sal\include\dfs_net;packages\CherryUSB-latest\class\hub;..\..\..\components\net\lwip\lwip-2.1.2\src\include\netif;packages\NimBLE-latest\nimble\host\include;..\..\..\components\finsh;..\..\..\libcpu\arm\common;packages\NimBLE-latest\nimble\host\services\lls\include;packages\NimBLE-latest\nimble\transport\include;..\..\..\components\libc\posix\io\epoll;packages\NimBLE-latest\nimble\host\store\ram\include;packages\NimBLE-latest\nimble\host\services\bleuart\include;..\..\..\components\net\sal\include\socket\sys_socket;packages\NimBLE-latest</IncludePath>
+              <IncludePath>board;..\..\..\components\libc\posix\io\poll;.;packages\CherryUSB-latest\common;..\..\..\include;..\libraries\HAL_Drivers;packages\CherryUSB-latest\class\wireless;packages\CherryUSB-latest\osal;..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Inc;..\..\..\components\dfs\dfs_v1\include;packages\CherryUSB-latest\class\cdc;..\..\..\components\drivers\include;..\..\..\components\libc\compilers\common\extension\fcntl\octal;..\..\..\components\libc\compilers\common\extension;packages\CherryUSB-latest\class\dfu;board\CubeMX_Config\Inc;..\libraries\STM32F4xx_HAL\CMSIS\Device\ST\STM32F4xx\Include;..\..\..\components\libc\posix\ipc;..\libraries\HAL_Drivers\config;..\..\..\components\drivers\include;packages\CherryUSB-latest\class\hid;..\..\..\components\dfs\dfs_v1\filesystems\devfs;packages\CherryUSB-latest\class\video;..\..\..\libcpu\arm\cortex-m4;..\libraries\HAL_Drivers\CMSIS\Include;packages\CherryUSB-latest\class\audio;..\..\..\components\libc\compilers\common\include;packages\CherryUSB-latest\class\msc;board\ports;..\..\..\components\net\sal\include;applications;..\..\..\components\drivers\include;..\..\..\components\drivers\include;..\..\..\components\net\lwip\lwip-2.1.2\src\include;..\..\..\components\net\lwip\port;packages\CherryUSB-latest\core;..\..\..\components\dfs\dfs_v1\filesystems\elmfat;..\..\..\components\net\sal\include\socket;..\..\..\components\net\sal\include\dfs_net;packages\CherryUSB-latest\class\hub;..\..\..\components\net\lwip\lwip-2.1.2\src\include\netif;..\..\..\components\net\netdev\include;..\..\..\components\finsh;..\..\..\libcpu\arm\common;..\..\..\components\net\sal\impl;..\..\..\components\libc\posix\io\eventfd;..\..\..\components\libc\posix\io\epoll;..\..\..\components\net\sal\include\socket\sys_socket</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -395,19 +395,9 @@
           <GroupName>CherryUSB</GroupName>
           <Files>
             <File>
-              <FileName>usb_osal_rtthread.c</FileName>
+              <FileName>usb_hc_dwc2.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages\CherryUSB-latest\osal\usb_osal_rtthread.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_hci_usbh.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\CherryUSB-latest\third_party\nimble-latest\ble_hci_usbh.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbh_cdc_acm.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\CherryUSB-latest\class\cdc\usbh_cdc_acm.c</FilePath>
+              <FilePath>packages\CherryUSB-latest\port\dwc2\usb_hc_dwc2.c</FilePath>
             </File>
             <File>
               <FileName>usbh_core.c</FileName>
@@ -415,34 +405,24 @@
               <FilePath>packages\CherryUSB-latest\core\usbh_core.c</FilePath>
             </File>
             <File>
+              <FileName>usb_osal_rtthread.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\CherryUSB-latest\osal\usb_osal_rtthread.c</FilePath>
+            </File>
+            <File>
               <FileName>usbh_hub.c</FileName>
               <FileType>1</FileType>
               <FilePath>packages\CherryUSB-latest\class\hub\usbh_hub.c</FilePath>
             </File>
             <File>
-              <FileName>dfs_usbh_msc.c</FileName>
+              <FileName>usbd_core.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages\CherryUSB-latest\third_party\rt-thread-5.0\dfs_usbh_msc.c</FilePath>
+              <FilePath>packages\CherryUSB-latest\core\usbd_core.c</FilePath>
             </File>
             <File>
-              <FileName>usbh_rndis.c</FileName>
+              <FileName>cdc_acm_template.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages\CherryUSB-latest\class\wireless\usbh_rndis.c</FilePath>
-            </File>
-            <File>
-              <FileName>msh_cmd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\CherryUSB-latest\third_party\rt-thread-5.0\msh_cmd.c</FilePath>
-            </File>
-            <File>
-              <FileName>usb_host.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\CherryUSB-latest\demo\usb_host.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbh_cdc_ecm.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\CherryUSB-latest\class\cdc\usbh_cdc_ecm.c</FilePath>
+              <FilePath>packages\CherryUSB-latest\demo\cdc_acm_template.c</FilePath>
             </File>
             <File>
               <FileName>usbh_hid.c</FileName>
@@ -450,9 +430,14 @@
               <FilePath>packages\CherryUSB-latest\class\hid\usbh_hid.c</FilePath>
             </File>
             <File>
-              <FileName>usb_hc_dwc2.c</FileName>
+              <FileName>usbh_msc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages\CherryUSB-latest\port\dwc2\usb_hc_dwc2.c</FilePath>
+              <FilePath>packages\CherryUSB-latest\class\msc\usbh_msc.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbh_cdc_acm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\CherryUSB-latest\class\cdc\usbh_cdc_acm.c</FilePath>
             </File>
             <File>
               <FileName>usb_glue_st.c</FileName>
@@ -460,14 +445,39 @@
               <FilePath>packages\CherryUSB-latest\port\dwc2\usb_glue_st.c</FilePath>
             </File>
             <File>
-              <FileName>usbh_msc.c</FileName>
+              <FileName>usbd_cdc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages\CherryUSB-latest\class\msc\usbh_msc.c</FilePath>
+              <FilePath>packages\CherryUSB-latest\class\cdc\usbd_cdc.c</FilePath>
             </File>
             <File>
-              <FileName>usbh_bluetooth.c</FileName>
+              <FileName>dfs_usbh_msc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\packages\CherryUSB-latest\class\wireless\usbh_bluetooth.c</FilePath>
+              <FilePath>packages\CherryUSB-latest\third_party\rt-thread-5.0\dfs_usbh_msc.c</FilePath>
+            </File>
+            <File>
+              <FileName>usb_host.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\CherryUSB-latest\demo\usb_host.c</FilePath>
+            </File>
+            <File>
+              <FileName>msh_cmd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\CherryUSB-latest\third_party\rt-thread-5.0\msh_cmd.c</FilePath>
+            </File>
+            <File>
+              <FileName>usb_dc_dwc2.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\CherryUSB-latest\port\dwc2\usb_dc_dwc2.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbh_rndis.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\CherryUSB-latest\class\wireless\usbh_rndis.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbh_cdc_ecm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\CherryUSB-latest\class\cdc\usbh_cdc_ecm.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1083,366 +1093,6 @@
               <FileName>iperf.c</FileName>
               <FileType>1</FileType>
               <FilePath>packages\netutils-latest\iperf\iperf.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>nimble</GroupName>
-          <Files>
-            <File>
-              <FileName>ble_l2cap.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_l2cap.c</FilePath>
-            </File>
-            <File>
-              <FileName>nimble_port_rtthread.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\porting\npl\rtthread\src\nimble_port_rtthread.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_svc_ias.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\services\ias\src\ble_svc_ias.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_att_svr.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_att_svr.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_gap.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_gap.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_sm.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_sm.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_hs.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_hs.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_gatts_lcl.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_gatts_lcl.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_svc_ans.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\services\ans\src\ble_svc_ans.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_store_util.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_store_util.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_hs_conn.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_hs_conn.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_svc_gatt.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\services\gatt\src\ble_svc_gatt.c</FilePath>
-            </File>
-            <File>
-              <FileName>endian.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\porting\nimble\src\endian.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_hs_hci_util.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_hs_hci_util.c</FilePath>
-            </File>
-            <File>
-              <FileName>npl_shell.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\porting\npl\rtthread\src\npl_shell.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_hs_log.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_hs_log.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_att_clt.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_att_clt.c</FilePath>
-            </File>
-            <File>
-              <FileName>transport.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\transport\src\transport.c</FilePath>
-            </File>
-            <File>
-              <FileName>misc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\apps\blecent\src\misc.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_l2cap_coc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_l2cap_coc.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_svc_lls.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\services\lls\src\ble_svc_lls.c</FilePath>
-            </File>
-            <File>
-              <FileName>nimble_port.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\porting\nimble\src\nimble_port.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_sm_alg.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_sm_alg.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_sm_cmd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_sm_cmd.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_hs_hci_evt.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_hs_hci_evt.c</FilePath>
-            </File>
-            <File>
-              <FileName>addr.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\util\src\addr.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_store.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_store.c</FilePath>
-            </File>
-            <File>
-              <FileName>blecent.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\apps\blecent\src\blecent.c</FilePath>
-            </File>
-            <File>
-              <FileName>cmac_mode.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\ext\tinycrypt\src\cmac_mode.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_l2cap_sig_cmd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_l2cap_sig_cmd.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_att_cmd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_att_cmd.c</FilePath>
-            </File>
-            <File>
-              <FileName>src_mem.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\porting\nimble\src\mem.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_sm_sc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_sm_sc.c</FilePath>
-            </File>
-            <File>
-              <FileName>peer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\apps\blecent\src\peer.c</FilePath>
-            </File>
-            <File>
-              <FileName>aes_encrypt.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\ext\tinycrypt\src\aes_encrypt.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_mbuf.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\porting\nimble\src\os_mbuf.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_hs_stop.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_hs_stop.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_store_ram.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\store\ram\src\ble_store_ram.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_hs_cfg.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_hs_cfg.c</FilePath>
-            </File>
-            <File>
-              <FileName>ecc_dh.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\ext\tinycrypt\src\ecc_dh.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_gattc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_gattc.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_hs_mbuf.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_hs_mbuf.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_hs_hci.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_hs_hci.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_sm_lgcy.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_sm_lgcy.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_svc_tps.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\services\tps\src\ble_svc_tps.c</FilePath>
-            </File>
-            <File>
-              <FileName>hci_h4.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\transport\common\hci_h4\src\hci_h4.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_svc_bas.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\services\bas\src\ble_svc_bas.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_hs_hci_cmd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_hs_hci_cmd.c</FilePath>
-            </File>
-            <File>
-              <FileName>aes_decrypt.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\ext\tinycrypt\src\aes_decrypt.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_svc_gap.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\services\gap\src\ble_svc_gap.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_msys_init.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\porting\nimble\src\os_msys_init.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_uuid.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_uuid.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_hs_flow.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_hs_flow.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_hs_startup.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_hs_startup.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_hs_atomic.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_hs_atomic.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_att.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_att.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_eddystone.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_eddystone.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_mempool.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\porting\nimble\src\os_mempool.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_hs_misc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_hs_misc.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_hs_pvcy.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_hs_pvcy.c</FilePath>
-            </File>
-            <File>
-              <FileName>ecc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\ext\tinycrypt\src\ecc.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_hs_mqueue.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_hs_mqueue.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_hs_adv.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_hs_adv.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_hs_periodic_sync.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_hs_periodic_sync.c</FilePath>
-            </File>
-            <File>
-              <FileName>utils.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\ext\tinycrypt\src\utils.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_ibeacon.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_ibeacon.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_l2cap_sig.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_l2cap_sig.c</FilePath>
-            </File>
-            <File>
-              <FileName>npl_os_rtthread.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\porting\npl\rtthread\src\npl_os_rtthread.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_gatts.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_gatts.c</FilePath>
-            </File>
-            <File>
-              <FileName>monitor.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\transport\src\monitor.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_hs_id.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\NimBLE-latest\nimble\host\src\ble_hs_id.c</FilePath>
             </File>
           </Files>
         </Group>

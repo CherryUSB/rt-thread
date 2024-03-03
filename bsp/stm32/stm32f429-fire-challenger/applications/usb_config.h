@@ -6,12 +6,12 @@
 #ifndef CHERRYUSB_CONFIG_H
 #define CHERRYUSB_CONFIG_H
 
-#define CHERRYUSB_VERSION     0x010000
-#define CHERRYUSB_VERSION_STR "v1.0.0"
+#include "rtthread.h"
+
+#define CHERRYUSB_VERSION     0x010100
+#define CHERRYUSB_VERSION_STR "v1.1.0"
 
 /* ================ USB common Configuration ================ */
-
-extern int rt_kprintf(const char *fmt, ...);
 
 #define CONFIG_USB_PRINTF(...) rt_kprintf(__VA_ARGS__)
 
@@ -35,6 +35,8 @@ extern int rt_kprintf(const char *fmt, ...);
 
 /* ================= USB Device Stack Configuration ================ */
 
+#define CONFIG_USBDEV_MAX_BUS 1    // for now, bus num must be 1 except hpm ip
+
 /* Ep0 max transfer buffer, specially for receiving data from ep0 out */
 #define CONFIG_USBDEV_REQUEST_BUFFER_LEN 256
 
@@ -46,6 +48,10 @@ extern int rt_kprintf(const char *fmt, ...);
 
 /* Enable test mode */
 // #define CONFIG_USBDEV_TEST_MODE
+
+#ifndef CONFIG_USBDEV_MSC_MAX_LUN
+#define CONFIG_USBDEV_MSC_MAX_LUN 1
+#endif
 
 #ifndef CONFIG_USBDEV_MSC_MAX_BUFSIZE
 #define CONFIG_USBDEV_MSC_MAX_BUFSIZE 512
@@ -132,19 +138,30 @@ extern int rt_kprintf(const char *fmt, ...);
 #define CONFIG_USBHOST_MSC_TIMEOUT 5000
 #endif
 
+#define CONFIG_USBHOST_BLUETOOTH_HCI_H4
+// #define CONFIG_USBHOST_BLUETOOTH_HCI_LOG
+
+#ifndef CONFIG_USBHOST_BLUETOOTH_TX_SIZE
+#define CONFIG_USBHOST_BLUETOOTH_TX_SIZE 2048
+#endif
+#ifndef CONFIG_USBHOST_BLUETOOTH_RX_SIZE
+#define CONFIG_USBHOST_BLUETOOTH_RX_SIZE 2048
+#endif
+
 /* ================ USB Device Port Configuration ================*/
 
-#define USBD_IRQHandler OTG_HS_IRQHandler
-#define USBD_BASE (0x40040000UL)
+#ifndef CONFIG_USBDEV_EP_NUM
 #define CONFIG_USBDEV_EP_NUM 6
-#define CONFIG_USB_DWC2_RAM_SIZE 4096
+#endif
 
+#define CONFIG_USB_DWC2_RAM_SIZE 4096
 /* ================ USB Host Port Configuration ==================*/
 
-#define CONFIG_USBHOST_PIPE_NUM 12
+// #define CONFIG_USBHOST_PIPE_NUM 10
 
 /* ================ EHCI Configuration ================ */
 
+#define CONFIG_USB_EHCI_HCCR_OFFSET     (0x0)
 #define CONFIG_USB_EHCI_HCOR_OFFSET     (0x10)
 #define CONFIG_USB_EHCI_FRAME_LIST_SIZE 1024
 // #define CONFIG_USB_EHCI_INFO_ENABLE

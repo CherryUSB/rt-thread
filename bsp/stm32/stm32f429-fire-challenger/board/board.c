@@ -50,8 +50,8 @@ void SystemClock_Config(void)
     Error_Handler();
   }
 }
-#if 1
-void usb_dc_low_level_init(uint8_t busid)
+#if 0
+void usb_dc_low_level_init(void)
 {
     GPIO_InitTypeDef GPIO_InitStruct = {0};
 #ifdef CONFIG_USB_DWC2_ULPI_PHY
@@ -138,6 +138,7 @@ void OTG_HS_IRQHandler(void)
 
 int usbd_init(void)
 {
+	extern void cdc_acm_init(uint8_t busid, uint32_t reg_base);
     cdc_acm_init(0, USB_OTG_HS_PERIPH_BASE);
     return 0;
 }

@@ -6,12 +6,12 @@
 #ifndef CHERRYUSB_CONFIG_H
 #define CHERRYUSB_CONFIG_H
 
-#define CHERRYUSB_VERSION     0x010000
-#define CHERRYUSB_VERSION_STR "v1.0.0"
+#define CHERRYUSB_VERSION     0x010100
+#define CHERRYUSB_VERSION_STR "v1.1.0"
 
 /* ================ USB common Configuration ================ */
 
-extern int rt_kprintf(const char *fmt, ...);
+#include "rtthread.h"
 
 #define CONFIG_USB_PRINTF(...) rt_kprintf(__VA_ARGS__)
 
@@ -35,6 +35,8 @@ extern int rt_kprintf(const char *fmt, ...);
 
 /* ================= USB Device Stack Configuration ================ */
 
+#define CONFIG_USBDEV_MAX_BUS 1    // for now, bus num must be 1 except hpm ip
+
 /* Ep0 max transfer buffer, specially for receiving data from ep0 out */
 #define CONFIG_USBDEV_REQUEST_BUFFER_LEN 256
 
@@ -46,6 +48,10 @@ extern int rt_kprintf(const char *fmt, ...);
 
 /* Enable test mode */
 // #define CONFIG_USBDEV_TEST_MODE
+
+#ifndef CONFIG_USBDEV_MSC_MAX_LUN
+#define CONFIG_USBDEV_MSC_MAX_LUN 1
+#endif
 
 #ifndef CONFIG_USBDEV_MSC_MAX_BUFSIZE
 #define CONFIG_USBDEV_MSC_MAX_BUFSIZE 512
@@ -132,25 +138,21 @@ extern int rt_kprintf(const char *fmt, ...);
 #define CONFIG_USBHOST_MSC_TIMEOUT 5000
 #endif
 
-#ifndef CONFIG_USBHOST_RNDIS_PRIO
-#define CONFIG_USBHOST_RNDIS_PRIO 1
-#endif
-#ifndef CONFIG_USBHOST_RNDIS_STACKSIZE
-#define CONFIG_USBHOST_RNDIS_STACKSIZE 2048
-#endif
+#define CONFIG_USBHOST_BLUETOOTH_HCI_H4
+// #define CONFIG_USBHOST_BLUETOOTH_HCI_LOG
 
-#ifndef CONFIG_USBHOST_CDC_ECM_PRIO
-#define CONFIG_USBHOST_CDC_ECM_PRIO 1
+#ifndef CONFIG_USBHOST_BLUETOOTH_TX_SIZE
+#define CONFIG_USBHOST_BLUETOOTH_TX_SIZE 2048
 #endif
-#ifndef CONFIG_USBHOST_CDC_ECM_STACKSIZE
-#define CONFIG_USBHOST_CDC_ECM_STACKSIZE 2048
+#ifndef CONFIG_USBHOST_BLUETOOTH_RX_SIZE
+#define CONFIG_USBHOST_BLUETOOTH_RX_SIZE 2048
 #endif
 
 /* ================ USB Device Port Configuration ================*/
 
-//#define USBD_IRQHandler USBD_IRQHandler
-//#define USB_BASE (0x40080000UL)
-//#define USB_NUM_BIDIR_ENDPOINTS 4
+#ifndef CONFIG_USBDEV_EP_NUM
+#define CONFIG_USBDEV_EP_NUM 4
+#endif
 
 /* ================ USB Host Port Configuration ==================*/
 
@@ -158,12 +160,12 @@ extern int rt_kprintf(const char *fmt, ...);
 
 /* ================ EHCI Configuration ================ */
 
+#define CONFIG_USB_EHCI_HCCR_OFFSET     (0x0)
 #define CONFIG_USB_EHCI_HCOR_OFFSET     (0x10)
 #define CONFIG_USB_EHCI_FRAME_LIST_SIZE 1024
-// #define CONFIG_USB_EHCI_INFO_ENABLE
 #define CONFIG_USB_EHCI_HCOR_RESERVED_DISABLE
 // #define CONFIG_USB_EHCI_CONFIGFLAG
 // #define CONFIG_USB_EHCI_PORT_POWER
-#define CONFIG_USB_EHCI_PRINT_HW_PARAM
+// #define CONFIG_USB_EHCI_PRINT_HW_PARAM
 
 #endif
